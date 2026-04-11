@@ -1,8 +1,8 @@
-import Route from "./route.js";
+import Route from "./Route.js";
 
 //Définition des routes
 export const allRoutes = [
-new Route("/", "Accueil", "/pages/home.html"),
+new Route("/", "Accueil", "./pages/home.html"),
 
 ]
 
