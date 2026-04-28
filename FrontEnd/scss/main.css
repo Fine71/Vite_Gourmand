@@ -12002,13 +12002,26 @@ p {
 }
 
 .hero-scene {
-  background-image: url("./images/hero-scene.jpg");
+  position: relative;
+}
+.hero-scene::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/hero-scene.jpg);
   background-size: cover;
-  background-position: center;
-  height: 400px;
+  filter: brightness(0.3);
+}
+.hero-scene * {
+  position: relative;
+}
+.hero-scene .hero-scene-content {
+  height: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }/*# sourceMappingURL=main.css.map */
