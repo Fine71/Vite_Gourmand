@@ -5,6 +5,9 @@ import Route from "./Route.js";
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     new Route("/menus", "Menus", "/pages/menus.html"),
+    new Route("/details", "Détails", "/pages/menus/details.html", [], "/pages/js/global.js"),
+    new Route("/signin", "Connexion", "/pages/auth/signin.html", []),
+    new Route("/signup", "Inscription", "/pages/auth/signup.html", [])
 
 ]
 
