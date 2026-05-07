@@ -1,12 +1,12 @@
 // Implémenter le JS de ma page d'inscription
 
-const inputNom = document.getElementById("nomInput");
-const inputPrenom = document.getElementById("prenomInput");
-const inputGSM = document.getElementById("gsmInput");
-const inputMail = document.getElementById("emailInput");
-const inputAdresse = document.getElementById("adresseInput");
-const inputPassword = document.getElementById("passwordInput");
-const inputValidatePassword = document.getElementById("validatePasswordInput");
+const inputNom = document.getElementById("NomInput");
+const inputPrenom = document.getElementById("PrenomInput");
+const inputGSM = document.getElementById("GsmInput");
+const inputMail = document.getElementById("EmailInput");
+const inputAdresse = document.getElementById("AdresseInput");
+const inputPassword = document.getElementById("PasswordInput");
+const inputValidatePassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
 
 inputNom.addEventListener("keyup", validateForm);
