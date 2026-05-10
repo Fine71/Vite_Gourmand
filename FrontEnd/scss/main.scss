@@ -50,6 +50,10 @@ p{
     }
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 /* 🔹 Sections générales */
 
 section {
@@ -68,4 +72,53 @@ section {
 
 .form-label{
     color: $primary;
+}
+
+.allcommandes{
+    a{
+        display: block;
+        color: $black;
+        padding: 10px;
+    }
+}
+
+.contact-form{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-form .form-group{
+    margin-bottom: 15px;
+}
+.contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button{
+    background-color: $primary;
+    color:  $dark;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover{
+    background-color: darken($primary, 10%);
+}
+.contact-article{
+    margin-top: 20px;
+}
+.contact-form-section{
+    padding: 20px;
+    border: 20px solid transparent;
+}
+.contact-section{
+    padding: 20px;
 }

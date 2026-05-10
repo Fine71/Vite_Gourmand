@@ -7,6 +7,7 @@ const inputMail = document.getElementById("EmailInput");
 const inputAdresse = document.getElementById("AdresseInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidatePassword = document.getElementById("ValidatePasswordInput");
+const inputCommandes = document.getElementById("CommandesInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
 
 inputNom.addEventListener("keyup", validateForm);
@@ -16,6 +17,7 @@ inputMail.addEventListener("keyup", validateForm);
 inputAdresse.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidatePassword.addEventListener("keyup", validateForm);
+inputCommandes.addEventListener("keyup", validateForm);
 
 //Fonction qui valide le formulaire d'inscription
 function validateForm() {
@@ -29,7 +31,8 @@ function validateForm() {
 
     if(nomOK && prenomOK && gsmOK && mailOK && adresseOK && passwordOK && passwordConfirmOK) {
         btnValidation.disabled = false;
-    } else {
+    } 
+    else {
         btnValidation.disabled = true;
     }
 }
@@ -39,7 +42,8 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd) {
         inputConfirmPwd.classList.add("is-valid");
         inputConfirmPwd.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
         inputConfirmPwd.classList.remove("is-valid");
         inputConfirmPwd.classList.add("is-invalid");
         return false;
@@ -55,7 +59,8 @@ function validatePassword(input) {
         input.classList.add("is-valid");
         input.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
         input.classList.remove("is-valid");
         input.classList.add("is-invalid");
         return false;
@@ -71,7 +76,8 @@ function validateEmail(input) {
         input.classList.add("is-valid");
         input.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
         input.classList.remove("is-valid");
         input.classList.add("is-invalid");
         return false;
@@ -87,7 +93,8 @@ function validatePhone(input) {
         input.classList.add("is-valid");
         input.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
         input.classList.remove("is-valid");
         input.classList.add("is-invalid");
         return false;
@@ -103,7 +110,25 @@ function validateAdresse(input) {
         input.classList.add("is-valid");
         input.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        return false;
+    }
+}
+
+function validateCommandes(input) {
+    // définir une regex pour valider les commandes
+    const commandesRegex = /^[a-zA-Z0-9\s,'-]{3,}$/; // Minimum 3 caractères, peut contenir des lettres, des chiffres, des espaces et certains caractères spéciaux
+    const commandesUser = input.value;
+
+    if(commandesUser.match(commandesRegex)) {
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
+        return true;
+    } 
+    else {
         input.classList.remove("is-valid");
         input.classList.add("is-invalid");
         return false;
@@ -111,12 +136,13 @@ function validateAdresse(input) {
 }
 
 function validateRequired(input) {
-    if(input.value != "") {
+    if(input.value != '') {
         //c'est OK
         input.classList.add("is-valid");
         input.classList.remove("is-invalid");
         return true;
-    } else {
+    } 
+    else {
         //c'est pas OK
         input.classList.remove("is-valid");
         input.classList.add("is-invalid");
