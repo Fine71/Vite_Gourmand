@@ -20,7 +20,5 @@ function checkCredentials() {
     else {
         mailInput.classList.add("is-invalid");
         passwordInput.classList.add("is-invalid");
-    
-    }
-    
+        }    
 }
