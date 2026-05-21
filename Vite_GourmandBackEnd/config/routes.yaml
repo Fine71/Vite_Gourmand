@@ -9,3 +9,12 @@
 
 controllers:
     resource: routing.controllers
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+api_restaurant:
+    path: /api/restaurant
+    controller: App\Controller\Api\RestaurantController::class
+    methods: [GET, POST]
